@@ -17,7 +17,11 @@ python sp.py
 
 3. The program will prompt you for the Spotify Client ID and Client Secret the first time you run it. These values will be saved for future runs in `client_id.txt` and `client_secret.txt`.
 
-
+How to get the spotify client id and secret:
+- Go to the Spotify Developer Dashboard. (https://developer.spotify.com/dashboard)
+- Log in with your Spotify account or create one if you don't have one.
+- Click on "Create an App" and fill in the necessary information. You can name it anything you like.
+- Once you've created the app, you'll see your client_id and client_secret on the app's dashboard.
 
 ## Interacting with the Program:
 
@@ -44,16 +48,6 @@ To exit the program, type `quit` and press Enter.
 - lz.py: The main Python script.
 - client_id.txt: Stores the Spotify Client ID.
 - client_secret.txt: Stores the Spotify Client Secret.
-
-## Notes:
-
-- If `client_id.txt` and `client_secret.txt` are not found, the program will prompt you to enter these values.
-
-How to get the spotify client id and secret:
-- Go to the Spotify Developer Dashboard. (https://developer.spotify.com/dashboard)
-- Log in with your Spotify account or create one if you don't have one.
-- Click on "Create an App" and fill in the necessary information. You can name it anything you like.
-- Once you've created the app, you'll see your client_id and client_secret on the app's dashboard.
 
 ## Dependencies:
 
