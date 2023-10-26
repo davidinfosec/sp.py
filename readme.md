@@ -1,4 +1,4 @@
-# sp.py - Spotify Link to YouTube // ArtistName,Song Name to YouTube
+# sp.py - Spotify Link to YouTube / ArtistName,Song Name to YouTube Converter
 
 This Python program allows users to convert Spotify track information into YouTube links. It also allows for Artist + Song Name combinations to output youtube video links.
 
