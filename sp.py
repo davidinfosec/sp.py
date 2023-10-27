@@ -5,20 +5,20 @@ from youtube_search import YoutubeSearch
 
 # Try to read the client ID from client_id.txt
 try:
-    with open('client_id.txt', 'r') as file:
+    with open('./client_id.txt', 'r') as file:
         SPOTIPY_CLIENT_ID = file.read().strip()
 except FileNotFoundError:
     SPOTIPY_CLIENT_ID = input("Enter your Spotify Client ID: ")
-    with open('client_id.txt', 'w') as file:
+    with open('./client_id.txt', 'w') as file:
         file.write(SPOTIPY_CLIENT_ID)
 
 # Try to read the client secret from client_secret.txt
 try:
-    with open('client_secret.txt', 'r') as file:
+    with open('./client_secret.txt', 'r') as file:
         SPOTIPY_CLIENT_SECRET = file.read().strip()
 except FileNotFoundError:
     SPOTIPY_CLIENT_SECRET = input("Enter your Spotify Client Secret: ")
-    with open('client_secret.txt', 'w') as file:
+    with open('./client_secret.txt', 'w') as file:
         file.write(SPOTIPY_CLIENT_SECRET)
 
 def get_youtube_link(artist, track_name):
