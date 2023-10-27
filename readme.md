@@ -45,7 +45,7 @@ To exit the program, type `quit` and press Enter.
 
 ## Files:
 
-- lz.py: The main Python script.
+- sp.py: The main Python script.
 - client_id.txt: Stores the Spotify Client ID.
 - client_secret.txt: Stores the Spotify Client Secret.
 
