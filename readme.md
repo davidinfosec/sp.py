@@ -34,6 +34,8 @@ You can interact with the program in a few ways:
 3. You can also use the ``--bulk`` flag to query a playlist for youtube links.
       EX. ``--bulk [SpotifyPlaylistLink] [NameOrDescriptor]``
 
+4. Optional Discord Webhook support -- simply specify a webhook URL when prompted.
+
 The playlist processing is a bit buggy with its current implementation and will only process up to 100 songs reliably. Keep your queries below 100 songs if you want to guarantee a fully processed playlist.
 
 Output will be generated to a .csv file dated and located under the sp-YYYY-MM folder
