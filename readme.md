@@ -32,7 +32,7 @@ You can interact with the program in a few ways:
 2. Enter Spotify Link: If you provide a Spotify track link (e.g., `https://open.spotify.com/track/xxxxxxxxxxxxxxxxxxx`), the program will extract the track information and search for the corresponding YouTube link.
 
 3. You can also use the ``--bulk`` flag to query a playlist for youtube links.
-      EX. ``--bulk [PlayListLink(Spotify)] [NameOrDescriptor]``
+      EX. ``--bulk [SpotifyPlaylistLink] [NameOrDescriptor]``
 
 The playlist processing is a bit buggy with its current implementation and will only process up to 100 songs reliably. Keep your queries below 100 songs if you want to guarantee a fully processed playlist.
 
