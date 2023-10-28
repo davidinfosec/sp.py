@@ -138,15 +138,32 @@ def process_playlist(playlist_link, playlist_name):
 # Define a function to manage webhook settings
 def manage_webhook():
     global webhook_url
-    use_webhook = input("Do you want to use a webhook for notifications? (yes/no): ").lower()
-    if use_webhook == 'yes':
-        webhook_url = input("Enter your Discord webhook URL: ")
-        with open('./webhook_url.txt', 'w') as file:
-            file.write(webhook_url)
-    elif use_webhook == 'no':
-        webhook_url = None
-        if os.path.exists('./webhook_url.txt'):
-            os.remove('./webhook_url.txt')
+    if os.path.exists('./webhook_url.txt'):
+        with open('./webhook_url.txt', 'r') as file:
+            webhook_url = file.read().strip()
+        if webhook_url.lower() == "none":
+            webhook_url = None
+
+    else:
+        use_webhook = input("Do you want to use a webhook for notifications? (yes/no/none): ").lower()
+        if use_webhook == 'yes':
+            webhook_url = input("Enter your Discord webhook URL: ")
+            with open('./webhook_url.txt', 'w') as file:
+                file.write(webhook_url)
+        elif use_webhook == 'none':
+            webhook_url = None
+            with open('./webhook_url.txt', 'w') as file:
+                file.write("none")
+        else:
+            webhook_url = None
+            
+def change_webhook():
+    global webhook_url
+    new_webhook_url = input("Enter your new Discord webhook URL (enter 'none' to disable webhook): ")
+    with open('./webhook_url.txt', 'w') as file:
+        file.write(new_webhook_url)
+    webhook_url = new_webhook_url if new_webhook_url.lower() != "none" else None
+    print("Webhook URL updated successfully.")
 
 # Define a function to send a message to the webhook
 def send_message_to_webhook(webhook_url, message):
@@ -178,7 +195,7 @@ def main():
       | |    | |     __/ |
       |_|    |_|    |___/ 
         ''')
-        user_input = input("Enter artist and track name (Artist,TrackName), Spotify link, 'cls' to clear screen, '--bulk PlaylistLink PlaylistName' to process a playlist, or 'quit' to exit (c to cancel): ")
+        user_input = input("Enter artist and track name (Artist,TrackName), Spotify link, 'cls' to clear screen, '--bulk PlaylistLink PlaylistName' to process a playlist, --webhook to change webhook URL, or 'quit' to exit (c to cancel): ")
 
         if user_input.lower() == 'quit':
             break
@@ -201,6 +218,19 @@ def main():
                     process_playlist(link, playlist_name)
             else:
                 print("Invalid input format. Please use '--bulk Link PlaylistName' or '--bulk-album AlbumLink'.")
+                
+                
+        if user_input.lower().startswith('--webhook'):
+            # Handle --webhook option
+            args = user_input.split(maxsplit=1)
+            if len(args) == 1:
+                print("Please specify 'on', 'off', 'link', or 'none' after --webhook.")
+            else:
+                action = args[1].lower()
+                if action in ['on', 'off', 'link', 'none']:
+                    manage_webhook()
+                else:
+                    print("Invalid option. Please use 'on', 'off', 'link', or 'none'.")
             continue
 
         spotify_link = ""
