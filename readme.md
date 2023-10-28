@@ -34,7 +34,7 @@ You can interact with the program in a few ways:
 3. You can also use the ``--bulk`` flag to query a playlist for youtube links.
       EX. ``--bulk [SpotifyPlaylistLink] [NameOrDescriptor]``
 
-4. Optional Discord Webhook support: simply specify a webhook URL when prompted.
+4. Optional Discord Webhook support: simply specify a webhook URL when prompted. You will not be prompted again unless you delete your webhook_url.txt file, generated in the same directory as the program, or unless you specify a different webhook with --webhook
 
 The playlist processing is a bit buggy with its current implementation and will only process up to 100 songs reliably. Keep your queries below 100 songs if you want to guarantee a fully processed playlist. May also crash the program. Bulk is buggy :(
 
