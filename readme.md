@@ -31,7 +31,8 @@ You can interact with the program in two ways:
 
 2. Enter Spotify Link: If you provide a Spotify track link (e.g., `https://open.spotify.com/track/xxxxxxxxxxxxxxxxxxx`), the program will extract the track information and search for the corresponding YouTube link.
 
-3. You can also use the ``--bulk`` flag to query a playlist for youtube links. The syntax would look like ``--bulk [PlayListLink(Spotify)] [NameOrDescriptor]``
+3. You can also use the ``--bulk`` flag to query a playlist for youtube links.
+      The syntax would look like ``--bulk [PlayListLink(Spotify)] [NameOrDescriptor]``
 
 ![Spotify to YouTube Link Converter](https://i.imgur.com/GqCPCXE.png)
 
