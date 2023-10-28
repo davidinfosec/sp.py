@@ -25,7 +25,7 @@ How to get the spotify client id and secret:
 
 ## Interacting with the Program:
 
-You can interact with the program in two ways:
+You can interact with the program in a few ways:
 
 1. Enter Artist and Track Name: Type the artist and track name in the format `Artist,TrackName` and press Enter. The program will search for the YouTube link associated with that track.
 
