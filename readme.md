@@ -2,6 +2,8 @@
 
 This Python program allows users to convert Spotify track information into YouTube links. It also allows for Artist + Song Name combinations to output youtube video links.
 
+Transparency: Most of this app was created with AI assistance, as I seek to find solutions to my problems in creative ways. After finding use of such a tool, it is only fair to share it with others who may benefit in the same way.
+
 ## Usage:
 
 1. Make sure you have Python installed on your system.
