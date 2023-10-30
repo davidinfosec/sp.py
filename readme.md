@@ -65,11 +65,6 @@ To exit the program, type `quit` and press Enter.
 - Spotipy: A lightweight Python library for the Spotify Web API.
 - youtube-search-python: A Python library to search for YouTube videos.
 
-## License:
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
 ## Support:
 
 Feel like this has been useful? Donate toward my latest projects. https://www.poof.io/tip/@davidinfosec
